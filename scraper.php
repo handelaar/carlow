@@ -1,5 +1,5 @@
 <?
-// Ireland PlanningAlerts scraper for Cork City Council
+// Ireland PlanningAlerts scraper for Carlow COunty Council
 // Uses LGMA shared backend for map data at ArcGIS.com
 //
 // John Handelaar 2017-06-27
@@ -97,8 +97,6 @@ foreach ($applications->features as $application) {
         'on_notice_from' => $on_notice_from,
         'on_notice_to' => $on_notice_to
     );
-    print_r($application);
-    die();
   
     $existingRecords = scraperwiki::select("* from data where `council_reference`='" . $application['council_reference'] . "'");
     if (sizeof($existingRecords) == 0) {
